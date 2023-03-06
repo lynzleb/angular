@@ -3,9 +3,10 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { NoopAnimationsModule } from '@angular/platform-browser/animations';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MaterialModule } from './material/material.module';
+
+import { SharedModule } from '../shared/shared.module';
+import { MiniFeaturesModule } from '../features/mini-features/mini-features.module';
 
 @NgModule({
     declarations: [
@@ -14,11 +15,10 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        NoopAnimationsModule,
-        MatButtonModule,
-        MatSlideToggleModule
+        MaterialModule,
+        SharedModule,
+        MiniFeaturesModule
     ],
-    providers: [],
     bootstrap: [AppComponent]
 })
 export class AppModule { }
