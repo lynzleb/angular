@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { MaterialModule } from './material/material.module';
 
 import { SharedModule } from '../shared/shared.module';
 import { MiniFeaturesModule } from '../features/mini-features/mini-features.module';
@@ -15,7 +14,6 @@ import { MiniFeaturesModule } from '../features/mini-features/mini-features.modu
     imports: [
         BrowserModule,
         AppRoutingModule,
-        MaterialModule,
         SharedModule,
         MiniFeaturesModule
     ],
