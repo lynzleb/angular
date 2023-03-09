@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
-
+import { MatIconModule } from '@angular/material/icon'
 
 @NgModule({
     declarations: [],
@@ -12,12 +12,14 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
         CommonModule,
         NoopAnimationsModule,
         MatButtonModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatIconModule
     ],
     exports: [
         NoopAnimationsModule,
         MatButtonModule,
-        MatSlideToggleModule
+        MatSlideToggleModule,
+        MatIconModule
     ]
 })
 export class MaterialModule { }

@@ -1,5 +1,19 @@
+@import '@angular/material/theming';
+
+.title-container {
+    margin-left: 20px;
+    margin-top: 50px;
+}
+
 section {
     display: table;
+    margin-top: 50px;
+    margin-left: 20px;
+}
+
+.component-container {
+    margin-left: 100px;
+    margin-top: 100px;
 }
 
 .example-label {
@@ -30,13 +44,9 @@ section {
     width: 120px;
 }
 
-section {
-    margin-left: 20px;
-    margin-top: 50px;
-}
-
 
 mat-slide-toggle {
     margin-left: 20px;
     margin-top: 50px;
 }
+

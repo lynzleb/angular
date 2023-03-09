@@ -1,3 +1,21 @@
-<h1>HOME</h1>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
 
-<router-outlet></router-outlet>
+<div class="title-container">
+    <h1 class="mat-h1">HOME</h1>
+</div>
+
+<section>
+    <div class="example-button-row">
+        <button mat-raised-button (click)="onClickCounter()">Counter</button>
+        <button mat-raised-button color="primary">Toggle</button>
+        <!-- <button mat-raised-button color="accent">Accent</button> -->
+        <!-- <button mat-raised-button color="warn">Warn</button> -->
+        <!-- <button mat-raised-button disabled>Disabled</button> -->
+        <!-- <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a> -->
+    </div>
+</section>
+
+<div class="component-container">
+    <router-outlet></router-outlet>
+</div>
+
