@@ -8,5 +8,13 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 })
 
 export class CounterComponent {
+    value = 0;
 
+    onIncrementValue(): void {
+        ++this.value;
+    }
+
+    onDecrementValue(): void {
+        --this.value;
+    }
 }
