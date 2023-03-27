@@ -13,7 +13,10 @@ export class AppComponent {
     title = 'angular';
 
     onClickCounter() {
-        console.log('hello');
         this.router.navigateByUrl('counter');
+    }
+
+    onClickToggle() {
+        this.router.navigateByUrl('toggle');
     }
 }
