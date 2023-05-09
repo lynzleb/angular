@@ -1,4 +1,4 @@
-<mat-slide-toggle (change)="onToggleChange($event)">Toggle me!</mat-slide-toggle>
+<mat-slide-toggle (change)="actions.switch($event.checked)">Toggle me!</mat-slide-toggle>
 
 <div *ngIf="(strVal$ | async) as val">
     <span>{{ val }}</span>
