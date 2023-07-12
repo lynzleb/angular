@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { Store } from '@ngxs/store';
+import { UpdateCounter } from 'src/store/app.state';
 
 @Component({
     selector: 'app-counter',
@@ -8,13 +9,21 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 })
 
 export class CounterComponent {
-    value = 0;
+  constructor(private store: Store) {}
 
-    onIncrementValue(): void {
-        ++this.value;
-    }
+  value = 0;
 
-    onDecrementValue(): void {
-        --this.value;
-    }
+  onIncrementValue(): void {
+      ++this.value;
+      this.updateCounterInStore(this.value);
+  }
+
+  onDecrementValue(): void {
+    --this.value;
+    this.updateCounterInStore(this.value);
+  }
+
+  private updateCounterInStore(value: number) {
+    this.store.dispatch(new UpdateCounter(value));
+  }
 }

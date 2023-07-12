@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 
 import { SharedModule } from '../shared/shared.module';
 import { MiniFeaturesModule } from '../features/mini-features/mini-features.module';
+import { NgxsModule } from '@ngxs/store';
+
+import { AppState as AppState } from 'src/store/app.state';
 
 @NgModule({
     declarations: [
@@ -16,6 +19,7 @@ import { MiniFeaturesModule } from '../features/mini-features/mini-features.modu
         BrowserModule,
         AppRoutingModule,
         HttpClientModule,
+        NgxsModule.forRoot([AppState]),
         SharedModule,
         MiniFeaturesModule
     ],
