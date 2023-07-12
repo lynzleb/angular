@@ -12,17 +12,8 @@ import { NgxsModule } from '@ngxs/store';
 import { AppState as AppState } from 'src/store/app.state';
 
 @NgModule({
-    declarations: [
-        AppComponent
-    ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        NgxsModule.forRoot([AppState]),
-        SharedModule,
-        MiniFeaturesModule
-    ],
-    bootstrap: [AppComponent]
+    declarations: [AppComponent],
+    imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgxsModule.forRoot([AppState]), SharedModule, MiniFeaturesModule],
+    bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

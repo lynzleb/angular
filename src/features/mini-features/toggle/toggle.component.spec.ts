@@ -7,10 +7,9 @@ describe('ToggleComponent', () => {
     let fixture: ComponentFixture<ToggleComponent>;
 
     beforeEach(async () => {
-            await TestBed.configureTestingModule({
-            declarations: [ ToggleComponent ]
-        })
-        .compileComponents();
+        await TestBed.configureTestingModule({
+            declarations: [ToggleComponent],
+        }).compileComponents();
 
         fixture = TestBed.createComponent(ToggleComponent);
         component = fixture.componentInstance;

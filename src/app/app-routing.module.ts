@@ -5,11 +5,11 @@ import { ToggleComponent } from 'src/features/mini-features/toggle/toggle.compon
 
 const routes: Routes = [
     { path: 'counter', component: CounterComponent },
-    { path: 'toggle', component: ToggleComponent }
+    { path: 'toggle', component: ToggleComponent },
 ];
 
 @NgModule({
     imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule]
+    exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
