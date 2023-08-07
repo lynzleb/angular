@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { Store } from '@ngxs/store';
-import { UpdateCounter } from 'src/store/app.state';
+import { DecrementCounter, IncrementCounter } from 'src/store/counter.state';
 
 @Component({
     selector: 'app-counter',
@@ -14,15 +14,17 @@ export class CounterComponent {
 
     onIncrementValue(): void {
         ++this.value;
-        this.updateCounterInStore(this.value);
+        // this.updateCounterInStore(this.value);
+        this.store.dispatch(new IncrementCounter());
     }
 
     onDecrementValue(): void {
         --this.value;
-        this.updateCounterInStore(this.value);
+        // this.updateCounterInStore(this.value);
+        this.store.dispatch(new DecrementCounter());
     }
 
-    private updateCounterInStore(value: number) {
-        this.store.dispatch(new UpdateCounter(value));
-    }
+    // private updateCounterInStore(value: number) {
+    //     this.store.dispatch(new UpdateCounter(value));
+    // }
 }
