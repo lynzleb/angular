@@ -5,13 +5,13 @@ import { CounterState } from 'src/store/counter.state';
 
 @Injectable()
 export class StateDisplayService {
-    @Select(CounterState.counter) counter$!: Observable<number>;
+  @Select(CounterState.counter) counter$!: Observable<number>;
 
-    constructor() {}
+  constructor() {}
 
-    displayString$ = this.counter$.pipe(
-        map((counter) => {
-            return `Value is ${counter}`;
-        }),
-    );
+  displayString$ = this.counter$.pipe(
+    map((counter) => {
+      return `Value is ${counter}`;
+    }),
+  );
 }

@@ -1,25 +1,24 @@
-<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500" rel="stylesheet" />
 
 <div class="title-container">
-    <h1 class="mat-h1">HOME</h1>
+  <h1 class="mat-h1">HOME</h1>
 </div>
 
 <div class="state flex justify-end mr-5">
-    <app-state-display></app-state-display>
+  <app-state-display></app-state-display>
 </div>
 
 <section>
-    <div class="example-button-row">
-        <button mat-raised-button (click)="onClickCounter()">Counter</button>
-        <button mat-raised-button color="primary" (click)="onClickToggle()">Toggle</button>
-        <!-- <button mat-raised-button color="accent">Accent</button> -->
-        <!-- <button mat-raised-button color="warn">Warn</button> -->
-        <!-- <button mat-raised-button disabled>Disabled</button> -->
-        <!-- <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a> -->
-    </div>
+  <div class="example-button-row">
+    <button mat-raised-button (click)="onClickCounter()">Counter</button>
+    <button mat-raised-button color="primary" (click)="onClickToggle()">Toggle</button>
+    <!-- <button mat-raised-button color="accent">Accent</button> -->
+    <!-- <button mat-raised-button color="warn">Warn</button> -->
+    <!-- <button mat-raised-button disabled>Disabled</button> -->
+    <!-- <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a> -->
+  </div>
 </section>
 
 <div class="component-container">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>
-

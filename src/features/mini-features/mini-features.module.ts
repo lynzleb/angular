@@ -6,8 +6,8 @@ import { ToggleComponent } from './toggle/toggle.component';
 import { StateDisplayComponent } from './state-display/state-display.component';
 
 @NgModule({
-    declarations: [CounterComponent, ToggleComponent, StateDisplayComponent],
-    imports: [SharedModule],
-    exports: [CounterComponent, StateDisplayComponent],
+  declarations: [CounterComponent, ToggleComponent, StateDisplayComponent],
+  imports: [SharedModule],
+  exports: [CounterComponent, StateDisplayComponent],
 })
 export class MiniFeaturesModule {}

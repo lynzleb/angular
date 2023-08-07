@@ -4,12 +4,12 @@ import { CounterComponent } from '../features/mini-features/counter/counter.comp
 import { ToggleComponent } from 'src/features/mini-features/toggle/toggle.component';
 
 const routes: Routes = [
-    { path: 'counter', component: CounterComponent },
-    { path: 'toggle', component: ToggleComponent },
+  { path: 'counter', component: CounterComponent },
+  { path: 'toggle', component: ToggleComponent },
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(routes)],
-    exports: [RouterModule],
+  imports: [RouterModule.forRoot(routes)],
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

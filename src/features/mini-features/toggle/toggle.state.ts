@@ -1,7 +1,7 @@
 export interface ToggleState {
-    display: string;
+  display: string;
 }
 
 export interface ToggleActions {
-    switch: boolean;
+  switch: boolean;
 }

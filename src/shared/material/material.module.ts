@@ -7,8 +7,8 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatIconModule } from '@angular/material/icon';
 
 @NgModule({
-    declarations: [],
-    imports: [CommonModule, NoopAnimationsModule, MatButtonModule, MatSlideToggleModule, MatIconModule],
-    exports: [NoopAnimationsModule, MatButtonModule, MatSlideToggleModule, MatIconModule],
+  declarations: [],
+  imports: [CommonModule, NoopAnimationsModule, MatButtonModule, MatSlideToggleModule, MatIconModule],
+  exports: [NoopAnimationsModule, MatButtonModule, MatSlideToggleModule, MatIconModule],
 })
 export class MaterialModule {}
