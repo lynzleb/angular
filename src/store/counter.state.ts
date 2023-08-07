@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { State, Action, StateContext, Selector } from '@ngxs/store';
-// import { patch } from '@ngxs/store/operators';
 
 export class UpdateCounter {
   static readonly type = '[Counter] UpdateCounter';
@@ -9,12 +8,10 @@ export class UpdateCounter {
 
 export class IncrementCounter {
   static readonly type = '[Counter] IncrementCounter';
-  // constructor() {}
 }
 
 export class DecrementCounter {
   static readonly type = '[Counter] DecrementCounter';
-  // constructor() {}
 }
 
 export interface CounterStateModel {
@@ -37,16 +34,16 @@ export class CounterState {
   @Action(UpdateCounter)
   updateCounter(ctx: StateContext<CounterStateModel>, action: UpdateCounter) {
     // #1
-    const state = ctx.getState();
-    ctx.setState({
-      ...state,
-      counter: action.value,
-    });
+    // const state = ctx.getState();
+    // ctx.setState({
+    //   ...state,
+    //   counter: action.value,
+    // });
 
     // #2
-    // ctx.patchState({
-    //   counter: action.value
-    // });
+    ctx.patchState({
+      counter: action.value,
+    });
 
     // #3
     // ctx.setState(

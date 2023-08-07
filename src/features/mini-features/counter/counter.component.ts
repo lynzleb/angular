@@ -14,17 +14,11 @@ export class CounterComponent {
 
   onIncrementValue(): void {
     ++this.value;
-    // this.updateCounterInStore(this.value);
     this.store.dispatch(new IncrementCounter());
   }
 
   onDecrementValue(): void {
     --this.value;
-    // this.updateCounterInStore(this.value);
     this.store.dispatch(new DecrementCounter());
   }
-
-  // private updateCounterInStore(value: number) {
-  //     this.store.dispatch(new UpdateCounter(value));
-  // }
 }
