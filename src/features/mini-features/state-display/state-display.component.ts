@@ -8,7 +8,13 @@ import { StateDisplayService } from './state-display.service';
   providers: [StateDisplayService],
 })
 export class StateDisplayComponent {
-  displayString$ = this.service.displayString$;
+  displayString$;
 
-  constructor(private service: StateDisplayService) {}
+  constructor(private service: StateDisplayService) {
+    this.displayString$ = this.service.getCount();
+  }
+
+  onClick(): void {
+    this.displayString$ = this.service.getCount();
+  }
 }

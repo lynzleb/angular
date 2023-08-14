@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { Store } from '@ngxs/store';
-import { DecrementCounter, IncrementCounter } from 'src/store/counter.state';
+import { CounterStateService } from 'src/shared/services/counter-state.service';
 
 @Component({
   selector: 'app-counter',
@@ -8,17 +7,17 @@ import { DecrementCounter, IncrementCounter } from 'src/store/counter.state';
   styleUrls: ['./counter.component.scss'],
 })
 export class CounterComponent {
-  constructor(private store: Store) {}
+  constructor(private counterState: CounterStateService) {}
 
   value = 0;
 
   onIncrementValue(): void {
     ++this.value;
-    this.store.dispatch(new IncrementCounter());
+    this.counterState.incrementCount();
   }
 
   onDecrementValue(): void {
     --this.value;
-    this.store.dispatch(new DecrementCounter());
+    this.counterState.decrementCount();
   }
 }

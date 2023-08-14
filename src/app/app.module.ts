@@ -9,11 +9,9 @@ import { SharedModule } from '../shared/shared.module';
 import { MiniFeaturesModule } from '../features/mini-features/mini-features.module';
 import { NgxsModule } from '@ngxs/store';
 
-import { CounterState } from 'src/store/counter.state';
-
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgxsModule.forRoot([CounterState]), SharedModule, MiniFeaturesModule],
+  imports: [BrowserModule, AppRoutingModule, HttpClientModule, SharedModule, MiniFeaturesModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

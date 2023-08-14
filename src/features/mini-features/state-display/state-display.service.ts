@@ -1,17 +1,13 @@
 import { Injectable } from '@angular/core';
 import { Select } from '@ngxs/store';
-import { Observable, map } from 'rxjs';
-import { CounterState } from 'src/store/counter.state';
+import { Observable } from 'rxjs';
+import { CounterStateService } from 'src/shared/services/counter-state.service';
 
 @Injectable()
 export class StateDisplayService {
-  @Select(CounterState.counter) counter$!: Observable<number>;
+  constructor(private counterState: CounterStateService) {}
 
-  constructor() {}
-
-  displayString$ = this.counter$.pipe(
-    map((counter) => {
-      return `Value is ${counter}`;
-    }),
-  );
+  getCount(): number {
+    return this.counterState.getCount();
+  }
 }
