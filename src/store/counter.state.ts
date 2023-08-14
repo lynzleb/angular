@@ -34,7 +34,7 @@ export class CounterState {
   @Action(UpdateCounter)
   updateCounter(ctx: StateContext<CounterStateModel>, action: UpdateCounter) {
     // #1
-    // const state = ctx.getState();
+    const state = ctx.getState();
     // ctx.setState({
     //   ...state,
     //   counter: action.value,
@@ -65,14 +65,14 @@ export class CounterState {
   @Action(IncrementCounter)
   incrementCounter(ctx: StateContext<CounterStateModel>) {
     ctx.patchState({
-      counter: ++ctx.getState().counter,
+      counter: ctx.getState().counter + 1,
     });
   }
 
   @Action(DecrementCounter)
   decrementCounter(ctx: StateContext<CounterStateModel>) {
     ctx.patchState({
-      counter: --ctx.getState().counter,
+      counter: ctx.getState().counter - 1,
     });
   }
 }

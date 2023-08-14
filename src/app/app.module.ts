@@ -13,7 +13,14 @@ import { CounterState } from 'src/store/counter.state';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, NgxsModule.forRoot([CounterState]), SharedModule, MiniFeaturesModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    NgxsModule.forRoot([CounterState], { developmentMode: true }),
+    SharedModule,
+    MiniFeaturesModule,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
