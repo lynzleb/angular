@@ -9,15 +9,11 @@ import { CounterStateService } from 'src/shared/services/counter-state.service';
 export class CounterComponent {
   constructor(private counterState: CounterStateService) {}
 
-  value = 0;
-
   onIncrementValue(): void {
-    ++this.value;
     this.counterState.incrementCount();
   }
 
   onDecrementValue(): void {
-    --this.value;
     this.counterState.decrementCount();
   }
 }
