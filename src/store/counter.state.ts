@@ -63,7 +63,7 @@ export class CounterState {
   }
 
   @Action(IncrementCounter)
-  incrementCounter(ctx: StateContext<CounterStateModel>) {
+  incrementCounter(ctx: StateContext<CounterStateModel>): void {
     ctx.patchState({
       counter: ctx.getState().counter + 1,
     });

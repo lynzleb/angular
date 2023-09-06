@@ -10,6 +10,7 @@ import { MiniFeaturesModule } from '../features/mini-features/mini-features.modu
 import { NgxsModule } from '@ngxs/store';
 
 import { CounterState } from 'src/store/counter.state';
+import { NgxsLoggerPluginModule } from '@ngxs/logger-plugin';
 
 @NgModule({
   declarations: [AppComponent],
@@ -18,6 +19,7 @@ import { CounterState } from 'src/store/counter.state';
     AppRoutingModule,
     HttpClientModule,
     NgxsModule.forRoot([CounterState], { developmentMode: true }),
+    NgxsLoggerPluginModule.forRoot(),
     SharedModule,
     MiniFeaturesModule,
   ],

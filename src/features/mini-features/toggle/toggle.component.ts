@@ -32,7 +32,7 @@ export class ToggleComponent {
   private initEffects(): void {}
 
   private getString(): Observable<any> {
-    return this.http.get('http://localhost:8080/getString', { responseType: 'text' }).pipe(
+    return this.http.get('http://localhost:1200/getString', { responseType: 'text' }).pipe(
       map((strVal) => {
         return strVal;
       }),
